@@ -158,7 +158,7 @@ class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         do {
-            System.out.println("[1] Reversing Text Program");
+            System.out.println("\n[1] Reversing Text Program");
             System.out.println("[2] Pyramid Program");
             System.out.println("[3] Summing Array");
             System.out.println("[4] Password Program");
@@ -202,8 +202,9 @@ class Main {
                 System.out.print("Unknown menu.");
             }
 
+            System.out.print("Want to redo it ? : ");
             String UserAnswerForRedo = System.console().readLine();
-            
+
             if (UserAnswerForRedo == "y") {
                 continue;
             }
@@ -212,6 +213,7 @@ class Main {
             }
             else {
                 System.out.println("Unknown Error");
+                break;
             }
         }
         while (true);
