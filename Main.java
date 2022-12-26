@@ -157,7 +157,7 @@ class Main {
         System.out.println("The result : " + sum);
     }
 
-    private static void  MethodReturnProgram() throws IOException {
+    public static void  MethodReturnProgram() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Point 1 : ");
         double score1 = Double.parseDouble(reader.readLine());
@@ -170,6 +170,8 @@ class Main {
         double avgScore = getAverageScore(score1, score2, score3, score4);
         System.out.println(avgScore);
     }
+
+
 
 
 
