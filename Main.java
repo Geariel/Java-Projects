@@ -1,10 +1,18 @@
 import java.io.*;
 
 class Main {
+    //Method program for getting average score for methods return program
+    private static double getAverageScore(double a, double b, double c, double d) {
+        return ((a + b + c + d) / 4);
+    }
     // Method used for Methods Program
     private static void WelcomeForMethodsProgram() {
         System.out.println("Welcome!");
     }
+
+
+    //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
 
     //Password Program from Sololearn using do while looping
     public static void PasswordProgram() {
@@ -47,8 +55,8 @@ class Main {
     public static void EmotionProgram() {
         String [] EmotionList = {"Happy", "Sad", "Surprised", "Angry"};
 
-        for (int loop = 0; loop < 4; loop ++) {
-            System.out.println("[" + loop + "] " +  EmotionList);
+        for (int loop = 1; loop < EmotionList.length; loop ++) {
+            System.out.println("[" + loop + "] " +  EmotionList[loop]);
         }
         int emotion = Integer.parseInt(System.console().readLine());
 
@@ -149,6 +157,19 @@ class Main {
         System.out.println("The result : " + sum);
     }
 
+    private static void  MethodReturnProgram() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Point 1 : ");
+        double score1 = Double.parseDouble(reader.readLine());
+        System.out.print("Point 2 : ");
+        double score2 = Double.parseDouble(reader.readLine());
+        System.out.print("Point 3 : ");
+        double score3 = Double.parseDouble(reader.readLine());
+        System.out.print("Point 4 : ");
+        double score4 = Double.parseDouble(reader.readLine());
+        double avgScore = getAverageScore(score1, score2, score3, score4);
+        System.out.println(avgScore);
+    }
 
 
 
@@ -158,51 +179,62 @@ class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         do {
-            System.out.println("\n[1] Reversing Text Program");
-            System.out.println("[2] Pyramid Program");
-            System.out.println("[3] Summing Array");
-            System.out.println("[4] Password Program");
-            System.out.println("[5] Discount Program");
-            System.out.println("[6] Methods Program");
-            System.out.println("[7] Emotion Program");
-            System.out.println("[8] Days Program");
-            System.out.println("[9] Result Game Program");
+            String[] MenuList = {"Result Game Program", 
+                                                    "Days Program", 
+                                                    "Emotion Program", 
+                                                    "Methods Program", 
+                                                    "Discount Program", 
+                                                    "Password Program", 
+                                                    "Summing Array", 
+                                                    "Pyramid Program", 
+                                                    "Reversing Text Program",
+                                                    "Methods Return Program"};
+
+            System.out.println();
+
+            for (int loop = 0; loop < MenuList.length; loop++) {
+                System.out.println("[" + loop + "] " + MenuList[loop]);
+            }
+
     
             System.out.println("Select the program from the menu list : ");
             int UserAnswer = Integer.parseInt(reader.readLine());
     
-            if (UserAnswer == 1) {
-                ReversingTextProgram();
+            if (UserAnswer == 0) {
+                ResultGameProgram();
             }
-            else if (UserAnswer == 2) {
-                PyramidProgram();
-            }
-            else if (UserAnswer == 3) {
-                SummingArray();
-            }
-            else if (UserAnswer == 4) {
-                PasswordProgram();
-            }
-            else if (UserAnswer == 5) {
-                DiscountProgram();
-            }
-            else if (UserAnswer == 6) {
-                MethodsProgram();
-            }
-            else if (UserAnswer == 7) {
-                EmotionProgram();
-            }
-            else if (UserAnswer == 8) {
+            else if (UserAnswer == 1) {
                 DaysProgram();
             }
+            else if (UserAnswer == 2) {
+                EmotionProgram();
+            }
+            else if (UserAnswer == 3) {
+                MethodsProgram();
+            }
+            else if (UserAnswer == 4) {
+                DiscountProgram();
+            }
+            else if (UserAnswer == 5) {
+                PasswordProgram();
+            }
+            else if (UserAnswer == 6) {
+                SummingArray();
+            }
+            else if (UserAnswer == 7) {
+                PyramidProgram();
+            }
+            else if (UserAnswer == 8) {
+                ReversingTextProgram();
+            }
             else if (UserAnswer == 9) {
-                ResultGameProgram();
+                MethodReturnProgram();
             }
             else  {
                 System.out.print("Unknown menu.");
             }
 
-            System.out.print("Want to redo it ? : ");
+            System.out.print("Want to redo it ? (y/n) : ");
             String UserAnswerForRedo = System.console().readLine();
 
             if (UserAnswerForRedo == "y") {
