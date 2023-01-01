@@ -22,7 +22,9 @@ class Main {
             System.out.print("Write password : ");
             password = Integer.parseInt(System.console().readLine());
         }
-        while (password != 242007);
+        while (password != 1234);
+
+        System.out.println("You're in");
     }   
 
     // Methods Program from Sololearn this function is similar like the other methods in other programming language
@@ -147,7 +149,6 @@ class Main {
         for (int i = 0; i < length; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
-
         int sum = 0;
         for (int i = 0; i < length; i++) {
             if (array[i] % 4 == 0) {
@@ -157,6 +158,7 @@ class Main {
         System.out.println("The result : " + sum);
     }
 
+    //Method return program that count all points and sum it to get the average score from Sololearn
     public static void  MethodReturnProgram() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Point 1 : ");
@@ -169,6 +171,17 @@ class Main {
         double score4 = Double.parseDouble(reader.readLine());
         double avgScore = getAverageScore(score1, score2, score3, score4);
         System.out.println(avgScore);
+    }
+
+    //Powering number program using math class made by my self 
+    public static void PoweringNumberProgram() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Input ur number : ");
+        int number = Integer.parseInt(reader.readLine());
+        System.out.print("Input ur power value : ");
+        int power = Integer.parseInt(reader.readLine());
+        double PoweredNumber = Math.pow(number, power);
+        System.out.println("The result : " + PoweredNumber);
     }
 
 
@@ -187,10 +200,11 @@ class Main {
                                                     "Methods Program", 
                                                     "Discount Program", 
                                                     "Password Program", 
-                                                    "Summing Array", 
+                                                    "Summing Array Program", 
                                                     "Pyramid Program", 
                                                     "Reversing Text Program",
-                                                    "Methods Return Program"};
+                                                    "Methods Return Program",
+                                                    "Powering Number Program"};
 
             System.out.println();
 
@@ -232,6 +246,9 @@ class Main {
             else if (UserAnswer == 9) {
                 MethodReturnProgram();
             }
+            else if (UserAnswer == 10) {
+                PoweringNumberProgram();
+            }
             else  {
                 System.out.print("Unknown menu.");
             }
@@ -242,11 +259,11 @@ class Main {
             if (UserAnswerForRedo == "y") {
                 continue;
             }
-            else if (UserAnswerForRedo == "n") {
+            else if (UserAnswerForRedo != "n") {
+                System.out.println("See ya 	(´ ∀ ` *)");
                 break;
             }
             else {
-                System.out.println("Unknown Error");
                 break;
             }
         }
