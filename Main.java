@@ -193,6 +193,8 @@ class Main {
     private static void Menu() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println("-------------------------------------------------------------------- Made by Geariel --------------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------------       Version 1.0     --------------------------------------------------------------------")
         do {
             String[] MenuList = {"Result Game Program", 
                                                     "Days Program", 
