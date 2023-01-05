@@ -1,12 +1,13 @@
 import java.io.*;
 
 class Main {
+
     //Method program for getting average score for methods return program
-    private static double getAverageScore(double a, double b, double c, double d) {
+    public static double getAverageScore(double a, double b, double c, double d) {
         return ((a + b + c + d) / 4);
     }
     // Method used for Methods Program
-    private static void WelcomeForMethodsProgram() {
+    public static void WelcomeForMethodsProgram() {
         System.out.println("Welcome!");
     }
 
@@ -36,11 +37,10 @@ class Main {
         for (int loop = 0; loop < NumberOfPeople; loop++) {
             WelcomeForMethodsProgram();
         }
-
     }
-   
-    //Days Program from sololearn using switch case
-    public static void DaysProgram() throws IOException{
+
+    
+    public static void DaysProgram() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("What day now ? : ");
         int day = Integer.parseInt(reader.readLine());
@@ -57,9 +57,10 @@ class Main {
     public static void EmotionProgram() {
         String [] EmotionList = {"Happy", "Sad", "Surprised", "Angry"};
 
-        for (int loop = 1; loop < EmotionList.length; loop ++) {
+        for (int loop = 1; loop < EmotionList.length; loop++) {
             System.out.println("[" + loop + "] " +  EmotionList[loop]);
         }
+
         int emotion = Integer.parseInt(System.console().readLine());
 
         switch (emotion) {
@@ -194,7 +195,8 @@ class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("-------------------------------------------------------------------- Made by Geariel --------------------------------------------------------------------");
-        System.out.println("--------------------------------------------------------------------       Version 1.0     --------------------------------------------------------------------")
+        System.out.println("--------------------------------------------------------------------       Version 1.0     --------------------------------------------------------------------");
+
         do {
             String[] MenuList = {"Result Game Program", 
                                                     "Days Program", 
